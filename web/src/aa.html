@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web前端技术</title>
+  <style>
+    /* 全局重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+
+    /* 页面基础样式 */
+    body {
+      background: #f0f2f5;
+      line-height: 1.7;
+      padding: 20px 0;
+    }
+
+    /* 主容器 */
+    .main-container {
+      width: 850px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      padding: 30px 40px;
+    }
+
+    /* 顶部登录栏 */
+    .login-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 25px;
+      border-bottom: 2px solid #e4e7ed;
+      margin-bottom: 25px;
+    }
+
+    .login-form {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .login-form input {
+      width: 140px;
+      height: 34px;
+      padding: 0 12px;
+      border: 1px solid #dcdfe6;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .login-form button {
+      height: 34px;
+      padding: 0 20px;
+      background: #409eff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    /* 内容区块 */
+    .section-block {
+      margin-bottom: 30px;
+    }
+
+    /* 标题样式 */
+    h1 {
+      color: #303133;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: #606266;
+      font-size: 20px;
+      margin: 18px 0 12px;
+      padding-left: 8px;
+      border-left: 4px solid #409eff;
+    }
+
+    h3 {
+      color: #909399;
+      font-size: 16px;
+      margin: 15px 0 10px;
+    }
+
+    /* 技术列表 */
+    .tech-list {
+      list-style: none;
+      margin: 15px 0;
+    }
+
+    .tech-list li {
+      padding: 6px 0;
+      padding-left: 22px;
+      position: relative;
+      color: #606266;
+    }
+
+    .tech-list li::before {
+      content: "•";
+      color: #409eff;
+      position: absolute;
+      left: 10px;
+      font-size: 18px;
+    }
+
+    /* 分割线 */
+    .divider {
+      height: 1px;
+      background: #e4e7ed;
+      margin: 25px 0;
+    }
+
+    /* 描述段落 */
+    .desc-text {
+      color: #606266;
+      font-size: 14px;
+      text-indent: 2em;
+      margin: 10px 0;
+    }
+
+    /* UI表单区域 */
+    .ui-container {
+      background: #f5f7fa;
+      border-radius: 6px;
+      padding: 20px;
+      margin: 15px 0;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-row label {
+      width: 80px;
+      color: #909399;
+      font-size: 14px;
+    }
+
+    .form-row input {
+      flex: 1;
+      height: 34px;
+      padding: 0 12px;
+      border: 1px solid #dcdfe6;
+      border-radius: 4px;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .form-button {
+      height: 34px;
+      padding: 0 22px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .primary-btn {
+      background: #409eff;
+      color: white;
+    }
+
+    .default-btn {
+      background: white;
+      border: 1px solid #dcdfe6;
+      color: #606266;
+    }
+
+    /* 框架展示 */
+    .framework-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .framework-item {
+      background: #ecf5ff;
+      color: #409eff;
+      padding: 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-align: center;
+      border: 1px solid #d9ecff;
+    }
+  </style>
+</head>
+<body>
+<div class="main-container">
+  <!-- 顶部登录栏 -->
+  <div class="login-header">
+    <h1>Web前端技术</h1>
+    <form class="login-form">
+      <input type="text" placeholder="用户名">
+      <input type="password" placeholder="密码">
+      <button type="button">登录</button>
+    </form>
+  </div>
+
+  <!-- HTML技术区块 -->
+  <div class="section-block">
+    <h2>HTML</h2>
+    <ul class="tech-list">
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Ajax</li>
+      <li>XML</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>我的位置/XSS</h3>
+    <p class="desc-text">CSS Classifier Style Shutter 层叠样式表是标准的常用语言，用来控制元素的尺寸、颜色和排版。用来定义应用程序的URL元素。将CSS的标题与HTML描述合，可使用有规则的注释的词组，并使用页面管理维护，易用性更好。请参阅CSS语言。</p>
+    <p class="desc-text">常见的CSS开发工具包括以文本、EditView文档编辑器、可视化网页开发工具及Framework CSS、Translate等。</p>
+    <p class="desc-text">关于CSS的一些问题，欢迎和我们交流。</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- UI表单区块 -->
+  <div class="section-block">
+    <h2>UI</h2>
+    <div class="ui-container">
+      <div class="form-row">
+        <label>Username</label>
+        <input type="text">
+      </div>
+      <div class="form-row">
+        <label>Password</label>
+        <input type="password">
+      </div>
+      <div class="form-buttons">
+        <button class="form-button primary-btn">点击设置主页</button>
+        <button class="form-button default-btn">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 框架展示区块 -->
+  <div class="section-block">
+    <h2>典型框架</h2>
+    <div class="framework-group">
+      <div class="framework-item">Router</div>
+      <div class="framework-item">Brite</div>
+      <div class="framework-item">Protectors</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
